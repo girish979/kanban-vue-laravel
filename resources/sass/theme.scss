@@ -1,0 +1,195 @@
+body {
+    // margin: 0;
+    // padding: 0;
+    
+    font-family: Helvetica;
+    font-weight: bold;
+  }
+
+  // alignment
+
+  .ft-r{
+    float:right;
+  }
+  .text-a-center{
+    text-align: center;
+  }
+
+  //width
+
+  .width-ful{
+    width: 100%;
+    float: left;
+  }
+  .wid_ful{
+    width:100%;
+  }
+  .width1-3{
+    width:33.33%;
+  }
+  .width2-3{
+    width:66.66%;
+  }
+
+  // display
+
+  .dis_i_flex{
+    display: inline-flex;
+  }
+
+  // padding
+
+  
+  .pad-y-5{
+    padding-top:5px;
+    padding-bottom:5px;
+  }
+  .pad-y-1{
+    padding-top:1rem;
+    padding-bottom:1rem;
+  }
+  .side_pad-2{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  // margin
+
+  .mrgn-0{margin: 0;}
+  .mrgn-2{
+    margin: 2px;
+  }
+  
+  .layout {
+    margin-top:20px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-gap: 10px;
+  }
+  
+  .layout__list {
+    align-self: start;
+    background-color: lightgray;
+    display: grid;
+    // grid-gap: 5px;
+    border-radius: 4px;
+  }
+
+  .layout__list__title {
+    text-align: center;
+  }
+
+  .layout__list__delete {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+  }
+  
+  
+  .list__card {
+    background-color: ghostwhite;
+    background: ghostwhite;
+    display: grid;
+    box-sizing: border-box;
+    margin: 6px;
+    border-radius: 4px;
+    
+    padding: 8px;
+    
+    transition: all .3s ease;
+    &:hover {
+      transform: scale(1.03);
+    }
+    &:active {
+      transform: scale(1.03) rotate(2deg);
+    }
+    
+    &:last-child {
+      .card {
+        &__date {
+          background: limegreen;
+        }
+      } 
+    }
+  }
+  
+.board_block{
+  & .taskAdd{
+      font-size: small;
+      background-color: ghostwhite;
+      background: ghostwhite;
+      display: grid;
+      box-sizing: border-box;
+      margin: 6px;
+      border-radius: 4px;
+      
+      padding: 8px;
+      
+      transition: all .3s ease;
+      &:hover {
+        transform: scale(1.03);
+      }
+      &:active {
+        transform: scale(1.03) rotate(2deg);
+      }
+  }
+}
+
+.task_modal{
+  label{
+    font-size: 14px;;
+  }
+  & button{
+    float: right;
+    padding:10px 15px;
+    margin:5px 5px 15px 5px;
+    border-radius: 5px;
+    width: 75px;
+  }
+  & button:first-child{
+    border:1px solid green;
+    background-color:transparent;
+    margin-right: 0;
+  }
+  & button:last-child{
+    border:1px solid red;
+    background-color:transparent;
+  }
+  & button:first-child:hover{
+    background-color: green;
+    color:#fff;
+  }
+  & button:last-child:hover{
+    background-color:red;
+    color:#fff;
+  }
+  & .v--modal-box.v--modal{
+    left:auto !important;
+    right:auto !important;
+    margin: auto;
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width:768px){
+  .task_modal{
+    & button:first-child{
+      margin-right: -6px;
+    }
+    & .v--modal-box.v--modal{
+      left:auto !important;
+      right:auto !important;
+      margin: auto;
+      max-width: 90% !important;      
+      height: auto !important;
+    }
+    & .width1-3, .width2-3{
+      width: 100%;
+    }
+    & .dis_i_flex{
+      display: block;
+    }
+  }  
+}
